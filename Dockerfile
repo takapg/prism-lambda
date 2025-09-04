@@ -4,4 +4,4 @@ ENV PORT=4010
 WORKDIR "/var/task"
 RUN npm install -g @stoplight/prism-cli
 COPY openapi.yaml /var/task/openapi.yaml
-CMD ["prism", "mock", "openapi.yaml"]
+CMD ["prism", "mock", "-h", "0.0.0.0", "openapi.yaml"]
